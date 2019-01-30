@@ -26,16 +26,12 @@ There are two gradle files that need to be modified:
  ```
  When the iOS bundle id is entered, the `GoogleService-Info.plist` is created.  This file needs to be downloaded and installed within XCode within the Runner directory.
 
-## Firestore Backend
-I created the learning firestore project
+## Challenges with the firestore plugin 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+I go to the [web page for Dart Packages](https://pub.dartlang.org/) and look up firestore.  I go to cloud_firestore 's  Installing page and use `cloud_firestore: ^0.9.0`.  This causes compile and build problems.  To fix these:
+- go to android/app/gradle.properties and add:  
+```
+android.useAndroidX=true
+android.enableJetifier=true
+```
+- go to android/app/build.gradle and change to `targetSdkVersion 28` and `compileSdkVersion 28`
