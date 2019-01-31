@@ -36,11 +36,19 @@ android.enableJetifier=true
 ```
 - go to android/app/build.gradle and change to `targetSdkVersion 28` and `compileSdkVersion 28`
 ## Adding a Custom Icon
-I wanted to add a sheep icon based on [this image](http://clipart-library.com/clipart/gce5AAAqi.htm).  I found [this Medium article by Neila on How to use custom icons in Flutter](https://medium.com/flutterpub/how-to-use-custom-icons-in-flutter-834a079d977).  
+I wanted to add a sheep icon based on [this image](http://clipart-library.com/clipart/gce5AAAqi.htm). 
 - convert the jpg into SVG.  I used [this tool](https://image.online-convert.com/convert-to-svg).  It was the first one returned in my Google search.
 - go to [FlutterIcon.com](http://fluttericon.com/)
   -  if we have already created icons and it doesn't show under *Custom Icons*, we can drag the config.json file that is created into the "Drag custom SVG..." box to bring back custom icons we have already added.
   - Name or keep the name of the icon collection. I renamed mine to CustomIcons.
-  - Download the icons.  This downloads a zip file that contains a:
-    - fonts folder.  I created an assets/fonts subdirectory off the root of this program and copied customIcons.ttf to that location.
-    - custom_icons_icons.dart -> I copied this file to the lib folder.
+  - Click on downloads.  This downloads a zip file that contains:
+    - fonts folder.  Copy this folder under the root of our project.  This way the path is fonts/<icons>.ttf
+    - custom_icons_icons.dart -> I copied this file to the lib folder.  I renamed it to custome_icons.dart.
+    - update pubspec.yaml:
+```
+fonts:
+   - family:  CustomIcons
+     fonts:
+       - asset: fonts/CustomIcons.ttf
+```
+- import the dart file where we use the CustomIcons.sheep (in this case).

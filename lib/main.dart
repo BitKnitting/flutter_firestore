@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'icons_helper.dart';
-import 'test_icons_icons.dart';
 
 void main() => runApp(MyApp());
 
@@ -61,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Card(
         child: ListTile(
           //leading: Icon(Icons.account_box),
-          leading: Icon(TestIcons.clipboard),
+          leading: Icon(getIcon(name: record.icon)),
           title: Text(record.tip),
           trailing: Icon(getIcon(name: 'keyboard_arrow_right')),
           onTap: () => print("tap tap"),
