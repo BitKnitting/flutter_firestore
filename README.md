@@ -52,3 +52,8 @@ fonts:
        - asset: fonts/CustomIcons.ttf
 ```
 - import the dart file where we use the CustomIcons.sheep (in this case).
+## Using Firestore
+Using Firestore proved to be quite easy.  I am used to SQL servers.  What I liked about Firestore was how lightweight it is to add fields/data versus the extremely structured approach of SQL Server.  It makes it a breeze to iterate on the what data should be in the database, how it will be viewed.  As noted in [this video about queries in Firestore](https://www.youtube.com/watch?v=Ofux_4c94FI)  there are some nifty join type queries or queries with more math/business logic that are a breeze for SQL, but not possible for firestore.  This struck me as how better fitted firestore was for the small data pieces that we all ping-pong across our apps via JSON.  I found [this video on getting started in Firestore](https://www.youtube.com/watch?v=DqJ_KjFzL9I) familiarized me with the general concepts/ideas behind Firestore.  The rest was copy/paste/iterate to get to the current example.
+
+## The example app
+The example app goes to my learning Firestore database and grabs the activities documents in order of the priority field.  It then makes ListItems for each tip using a leading icon mapped from the icon field to an IconData...easy peasy....
