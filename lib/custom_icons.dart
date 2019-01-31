@@ -12,6 +12,10 @@
 ///       - asset: fonts/CustomIcons.ttf
 ///
 /// 
+/// * Elusive, Copyright (C) 2013 by Aristeides Stathopoulos
+///         Author:    Aristeides Stathopoulos
+///         License:   SIL (http://scripts.sil.org/OFL)
+///         Homepage:  http://aristeides.com/
 ///
 import 'package:flutter/widgets.dart';
 
@@ -21,4 +25,5 @@ class CustomIcons {
   static const _kFontFam = 'CustomIcons';
 
   static const IconData sheep = const IconData(0xe800, fontFamily: _kFontFam);
+  static const IconData clipboard = const IconData(0xe801, fontFamily: _kFontFam);
 }

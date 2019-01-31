@@ -5,6 +5,7 @@ const IconsMap = {
   'keyboard_arrow_right': Icons.keyboard_arrow_right,
   'power': Icons.power,
   'sheep': CustomIcons.sheep,
+  'clipboard': CustomIcons.clipboard,
 };
 IconData getIcon({String name}) {
   if (IconsMap[name] != null) {
